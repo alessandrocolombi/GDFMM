@@ -12,6 +12,41 @@ example_GDFMM_sampler_c <- function(data, P0_prior_name) {
     .Call(`_GDFMM_example_GDFMM_sampler_c`, data, P0_prior_name)
 }
 
+#' Rigon - lgfactorial
+#'
+#' @export
+lgfactorial <- function(n, sigma) {
+    .Call(`_GDFMM_lgfactorial`, n, sigma)
+}
+
+#' Rigon - lgfactorials
+#'
+#' @export
+lgfactorials <- function(n, sigma) {
+    .Call(`_GDFMM_lgfactorials`, n, sigma)
+}
+
+#' Rigon - lgfactorial_ns
+#'
+#' @export
+lgfactorial_ns <- function(n, sigma) {
+    .Call(`_GDFMM_lgfactorial_ns`, n, sigma)
+}
+
+#' Rigon - lastirling1
+#'
+#' @export
+lastirling1 <- function(n) {
+    .Call(`_GDFMM_lastirling1`, n)
+}
+
+#' Rigon - lastirlings1
+#'
+#' @export
+lastirlings1 <- function(n) {
+    .Call(`_GDFMM_lastirlings1`, n)
+}
+
 #' Eigen library usage example
 #'
 #' @export
@@ -24,5 +59,47 @@ EigenTest <- function() {
 #' @export
 TestGSL <- function() {
     invisible(.Call(`_GDFMM_TestGSL`))
+}
+
+#' Calcola Stirling
+#'
+#' @export
+calcola_stirling <- function(gamma, n) {
+    .Call(`_GDFMM_calcola_stirling`, gamma, n)
+}
+
+#' Calcola Stirling Ricorsivo
+#'
+#' @export
+calcola_stirling_ricor <- function(gamma, n) {
+    .Call(`_GDFMM_calcola_stirling_ricor`, gamma, n)
+}
+
+#' Calcola Stirling Ricorsivo Abs
+#'
+#' @export
+calcola_stirling_ricor_abs <- function(gamma, n) {
+    .Call(`_GDFMM_calcola_stirling_ricor_abs`, gamma, n)
+}
+
+#' Calcola Stirling Ricorsivo Log
+#'
+#' @export
+calcola_stirling_ricor_log <- function(gamma, n) {
+    .Call(`_GDFMM_calcola_stirling_ricor_log`, gamma, n)
+}
+
+#' Calcola Fattoriale Generalizzato Ricorsivo Log
+#'
+#' @export
+calcola_generalized_factorial_ricor_log <- function(gamma, n) {
+    .Call(`_GDFMM_calcola_generalized_factorial_ricor_log`, gamma, n)
+}
+
+#' Calcola Fattoriale Generalizzato Ricorsivo Log Matrice
+#'
+#' @export
+calcola_generalized_factorial_ricor_log_matrice <- function(gamma, n) {
+    .Call(`_GDFMM_calcola_generalized_factorial_ricor_log_matrice`, gamma, n)
 }
 
