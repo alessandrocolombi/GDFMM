@@ -2,10 +2,14 @@
 % Please edit documentation in R/RcppExports.R
 \name{calcola_stirling_ricor_log}
 \alias{calcola_stirling_ricor_log}
-\title{Calcola Stirling Ricorsivo Log}
+\title{Compute log of absolute values of non Central C number - Recursive formula for Raf}
 \usage{
-calcola_stirling_ricor_log(gamma, n)
+calcola_stirling_ricor_log(n, gamma, r)
 }
 \description{
-Calcola Stirling Ricorsivo Log
+\loadmathjax This is the main function in the computation of C numbers. It uses the (2.69) formula in the "Combinatorial methods in discrete distributions" book.
+It computes \mjseqn{|C(n,k;-\gamma,-r)|} for each k=0,...,n. \mjseqn{\gamma} and r have to be positive.
+Attenzione nota importante. Questa in posizione (n,0) ha sempre lo stesso valore ed è pari al fattoriale decrescente (r)1. Ci sono due cose che non tornano,
+prima di tutto il fatto che sia sempre uguale e poi che sia il fattoriale decrescente. In base alla relazione
+\mjsdeqn{(a + n -1)_{n} = (a)^{n}}, quello dovrebbe essere un raising factorial.
 }

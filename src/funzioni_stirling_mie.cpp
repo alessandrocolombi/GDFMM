@@ -27,7 +27,7 @@
 //'
 //' @export
 // [[Rcpp::export]]
-Rcpp::NumericVector calcola_stirling(double gamma, int n){
+Rcpp::NumericVector calcola_stirling_old(double gamma, int n){
 
 
 	Rcpp::NumericVector out(n); // The output vector
@@ -56,7 +56,7 @@ Rcpp::NumericVector calcola_stirling(double gamma, int n){
 //'
 //' @export
 // [[Rcpp::export]]
-Rcpp::NumericVector calcola_stirling_ricor(double gamma, unsigned int n){
+Rcpp::NumericVector calcola_stirling_ricor_old(double gamma, unsigned int n){
 	gamma=-gamma;
 	Rcpp::NumericVector row_j(n+1,0.0); // The output vector initialize all the element to zero
 	row_j[0]=1; /// Row j=0
@@ -88,7 +88,7 @@ Rcpp::NumericVector calcola_stirling_ricor(double gamma, unsigned int n){
 //'
 //' @export
 // [[Rcpp::export]]
-Rcpp::NumericVector calcola_stirling_ricor_abs(double gamma, unsigned int n){
+Rcpp::NumericVector calcola_stirling_ricor_abs_old(double gamma, unsigned int n){
 
 	Rcpp::NumericVector row_j(n+1,0.0); // The output vector initialize all the element to zero
 	row_j[0]=1; /// Row j=0
@@ -127,7 +127,7 @@ Rcpp::NumericVector calcola_stirling_ricor_abs(double gamma, unsigned int n){
 //'
 //' @export
 // [[Rcpp::export]]
-Rcpp::NumericVector calcola_stirling_ricor_log(double gamma, unsigned int n){
+Rcpp::NumericVector calcola_stirling_ricor_log_old(double gamma, unsigned int n){
 
 	double infinito = std::numeric_limits<double>::infinity();
 
@@ -168,7 +168,7 @@ Rcpp::NumericVector calcola_stirling_ricor_log(double gamma, unsigned int n){
 //'
 //' @export
 // [[Rcpp::export]]
-Rcpp::NumericVector calcola_generalized_factorial_ricor_log(double gamma, unsigned int n){
+Rcpp::NumericVector calcola_generalized_factorial_ricor_log_old(double gamma, unsigned int n){
 
 	double infinito = std::numeric_limits<double>::infinity();
 
@@ -210,7 +210,7 @@ Rcpp::NumericVector calcola_generalized_factorial_ricor_log(double gamma, unsign
 //'
 //' @export
 // [[Rcpp::export]]
-Rcpp::NumericMatrix calcola_generalized_factorial_ricor_log_matrice(double gamma, unsigned int n){
+Rcpp::NumericMatrix calcola_generalized_factorial_ricor_log_matrice_old(double gamma, unsigned int n){
 
 	double infinito = std::numeric_limits<double>::infinity();
 

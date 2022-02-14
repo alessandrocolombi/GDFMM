@@ -100,8 +100,7 @@ arma::mat lgfactorials_ns(int n, double sigma){
 //' Commento Ale: questa fuzione restituisce il vettore contenente il logaritmo dell'intero sviluppo dei moduli di un
 //' numero di Stirling del primo tipo. 
 //' Per esempio, per n=4, ho |s(n,0)| = 0, |s(n,1)| = 6, |s(n,2)|= 11, |s(n,3)| = 6, |s(n,4)| = 4.
-//' Quindi, lo sviluppo di 4 è un vettore di 4 elementi (lo 0 è banale, lo omettiamo) e infatti se faccio 
-//' exp(lastirling1(4)) = c(6,11,6,1).
+//' Quindi, lo sviluppo di 4 è un vettore di 4 elementi (lo 0 è banale, lo omettiamo) 
 //' @export
 // [[Rcpp::export]]
 arma::vec lastirling1(int n){
@@ -128,7 +127,6 @@ arma::vec lastirling1(int n){
 //' Commento Ale, questa è l'estensione di lastirling1. Questa ritorna una matrice triangolare inferiori, l'argomento n
 //' vuol dire che deve calcolare tutti gli sviluppi fino ad n, partendo da s(1) che è banalmente uguale ad uno. Anche
 //' questa lavora in scala logaritmica.
-//' Esempio, se faccio lastirlings1(8)[4,1:4] ottengo lo stesso output di lastirling1(4)
 //' @export
 // [[Rcpp::export]]
 arma::mat lastirlings1(int n){

@@ -7,5 +7,7 @@
 lastirlings1(n)
 }
 \description{
-Rigon - lastirlings1
+Commento Ale, questa è l'estensione di lastirling1. Questa ritorna una matrice triangolare inferiori, l'argomento n
+vuol dire che deve calcolare tutti gli sviluppi fino ad n, partendo da s(1) che è banalmente uguale ad uno. Anche
+questa lavora in scala logaritmica.
 }

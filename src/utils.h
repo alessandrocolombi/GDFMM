@@ -4,6 +4,7 @@
 #include "include_headers.h"
 #include "recurrent_traits.h"
 #include "GSL_wrappers.h"
+#include <gsl/gsl_sf.h>
 
 using namespace GDFMM_Traits;
 
@@ -103,6 +104,18 @@ namespace utils{
 	Derived_mat SubMatrix(Eigen::MatrixBase<Derived_mat> const & M, Eigen::MatrixBase<Derived_rows> const & idx_rows, unsigned int const & idx_cols){
 		return SubMatrix(M, idx_rows, Eigen::Map<const VecUnsCol> (&idx_cols, 1));
 	}
+
+	//------------------------------------------------------------------------------------------------------------------------------------------------------
+	//	Recursive function for C numbers
+	//------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	//double raising_factorial(const unsigned int& n, const double& a);
+	//double my_falling_factorial(const unsigned int& n, const double& a);
+	//double compute_Pochhammer(const unsigned int& x, const double& a);
+//	
+	//void build_logC_matrix(const unsigned int& n, const unsigned int& k, const double& s, const double& r, MatCol& res);
+
+
 }
 
 #endif
