@@ -225,24 +225,6 @@ void TestGSL(){
 	Rcpp::Rcout<<my_sample(engine2, K)<<std::endl;
 
 
-	Rcpp::Rcout<<std::endl<<std::endl;
-
-	Rcpp::Rcout<<"##########################"<<std::endl;
-	Rcpp::Rcout<<"         Discrete         " <<std::endl;
-	Rcpp::Rcout<<"##########################"<<std::endl;
-
-	sample::discrete Discrete;
-	Rcpp::Rcout<<"weights values: "<<unnorm_weights<<std::endl;
-	double* arrayprobs = unnorm_weights.data();
-	Rcpp::Rcout<<"arrayprobs "<<std::endl;
-	for(int i = 0; i < 3; ++i)
-		Rcpp::Rcout<<arrayprobs[i]<<",  ";
-	Rcpp::Rcout<<std::endl;
-
-	Rcpp::Rcout<<"Discrete(gs_engine, arrayprobs) = "<<std::endl;
-	Rcpp::Rcout<< Discrete(engine2, arrayprobs)<<std::endl;
-
-
 }
 
 
