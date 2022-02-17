@@ -565,7 +565,6 @@ namespace sample{ //use the sample:: namespace to aviod clashes with R or oterh 
 			return rwish<RetType, isCholType>()(GSL_RNG (), b,Psi);
 		}
 	};
-	
 }
 
 #endif

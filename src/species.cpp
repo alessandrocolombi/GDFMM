@@ -12,6 +12,14 @@
 #include "utils.h"
 #include <gsl/gsl_sf.h>
 
+//' Title Rcpp function
+//'
+//' @export
+// [[Rcpp::export]]
+int try_rcpp(int x){
+	Rcpp::Rcout<<"Inside test function"<<std::endl;
+	return x+10;
+}
 
 //' Raising Factorial
 //'
