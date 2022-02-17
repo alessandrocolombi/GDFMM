@@ -4,7 +4,6 @@
 #include "include_headers.h"
 #include "recurrent_traits.h"
 #include "GSL_wrappers.h"
-#include <gsl/gsl_sf.h>
 
 using namespace GDFMM_Traits;
 
