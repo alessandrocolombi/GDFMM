@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #### GDFMM FUNCTIONS ####
 
 # Here are collected all functions needed/usefull to run GDFMM Gibbs Sampler
@@ -319,9 +318,6 @@ simulate_data <- function(n_simul, group_dim, p_mix, mu, sigma,
 #' GDFMM Gibbs Sampler: function to run the GDFMM model. There is the possibility to fix
 #'                      the partition, passing TRUE to FixPartition and specifying the 
 #'                      partion in the option. Default prior for P0 is an inverse gamma
-=======
-#' The R function
->>>>>>> species
 #'
 #' @param data input data
 #' @param niter number of iterations

@@ -1,7 +1,6 @@
 # GDFMM
 R package for Group Dependent Finite Mixture Models
 
-<<<<<<< HEAD
 # R/
 This folder contains all .R files. Do not modify GDFMM-package.R and zzz.R (used to load and unload the dynamic C++ library created from source files). In GDFMM_export.R there are all functions implemented for the library, so those functions that ca be called from R. All functions are documented with Roxygen 
 
@@ -26,17 +25,9 @@ This folder contains R scripts to test the GDFMM algorithm on simulated datasets
 
 # Compile, document, build and run
 The first thing to be done is to clone this repository in a local directory. Open Git or Git Bash and set the directory where you want the folder to be cloned into. The run 
-=======
-# species branch
-This branch is for the development of the finite species sampling model. 
-
-# Note
-Ho clonato la il nuovo branch della repo in una cartella diversa da dove avevo GDFMM. Ho usato
->>>>>>> species
 ```shell
-$ git clone -b species git@github.com:alessandrocolombi/GDFMM.git
+$ git clone https://github.com/alessandrocolombi/GDFMM.git
 ```
-<<<<<<< HEAD
 or run 
 ```shell
 $ git clone git@github.com:alessandrocolombi/GDFMM.git
@@ -73,13 +64,5 @@ install.package("package_name.tar.gz", repos = NULL )
 
 
 
-=======
-Se entro con git bash nella cartella e faccio git status, mi dice che è up to date anche se non lo è. Infatti facendo 
-```shell
-$ git pull
-```
-o aprendo il .Rproj con R e facendo pull con quella freccia, è andato tutto bene. Ora ho modificato il README in locale
-e da R vedo che segna il pulsando per fare commit e push del README. Andato bene!
->>>>>>> species
 
 
