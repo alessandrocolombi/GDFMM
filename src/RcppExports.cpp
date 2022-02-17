@@ -12,130 +12,6 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// try_rcpp
-int try_rcpp(int x);
-RcppExport SEXP _GDFMM_try_rcpp(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(try_rcpp(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// example_GDFMM_sampler_c
-Rcpp::List example_GDFMM_sampler_c(Eigen::MatrixXd const& data, Rcpp::String P0_prior_name);
-RcppExport SEXP _GDFMM_example_GDFMM_sampler_c(SEXP dataSEXP, SEXP P0_prior_nameSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Eigen::MatrixXd const& >::type data(dataSEXP);
-    Rcpp::traits::input_parameter< Rcpp::String >::type P0_prior_name(P0_prior_nameSEXP);
-    rcpp_result_gen = Rcpp::wrap(example_GDFMM_sampler_c(data, P0_prior_name));
-    return rcpp_result_gen;
-END_RCPP
-}
-// raising_factorial
-double raising_factorial(const unsigned int& n, const double& a);
-RcppExport SEXP _GDFMM_raising_factorial(SEXP nSEXP, SEXP aSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double& >::type a(aSEXP);
-    rcpp_result_gen = Rcpp::wrap(raising_factorial(n, a));
-    return rcpp_result_gen;
-END_RCPP
-}
-// my_falling_factorial
-double my_falling_factorial(const unsigned int& n, const double& a);
-RcppExport SEXP _GDFMM_my_falling_factorial(SEXP nSEXP, SEXP aSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double& >::type a(aSEXP);
-    rcpp_result_gen = Rcpp::wrap(my_falling_factorial(n, a));
-    return rcpp_result_gen;
-END_RCPP
-}
-// compute_Pochhammer
-double compute_Pochhammer(const unsigned int& x, const double& a);
-RcppExport SEXP _GDFMM_compute_Pochhammer(SEXP xSEXP, SEXP aSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type x(xSEXP);
-    Rcpp::traits::input_parameter< const double& >::type a(aSEXP);
-    rcpp_result_gen = Rcpp::wrap(compute_Pochhammer(x, a));
-    return rcpp_result_gen;
-END_RCPP
-}
-// build_logC_matrix
-void build_logC_matrix(const unsigned int& n, const unsigned int& k, const double& s, const double& r, Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor>& res);
-RcppExport SEXP _GDFMM_build_logC_matrix(SEXP nSEXP, SEXP kSEXP, SEXP sSEXP, SEXP rSEXP, SEXP resSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const unsigned int& >::type k(kSEXP);
-    Rcpp::traits::input_parameter< const double& >::type s(sSEXP);
-    Rcpp::traits::input_parameter< const double& >::type r(rSEXP);
-    Rcpp::traits::input_parameter< Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor>& >::type res(resSEXP);
-    build_logC_matrix(n, k, s, r, res);
-    return R_NilValue;
-END_RCPP
-}
-// my_logC
-Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor> my_logC(const unsigned int& n, const double& scale, const double& location);
-RcppExport SEXP _GDFMM_my_logC(SEXP nSEXP, SEXP scaleSEXP, SEXP locationSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
-    Rcpp::traits::input_parameter< const double& >::type location(locationSEXP);
-    rcpp_result_gen = Rcpp::wrap(my_logC(n, scale, location));
-    return rcpp_result_gen;
-END_RCPP
-}
-// my_logC2
-Eigen::VectorXd my_logC2(const unsigned int& n, const double& scale, const double& location);
-RcppExport SEXP _GDFMM_my_logC2(SEXP nSEXP, SEXP scaleSEXP, SEXP locationSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
-    Rcpp::traits::input_parameter< const double& >::type location(locationSEXP);
-    rcpp_result_gen = Rcpp::wrap(my_logC2(n, scale, location));
-    return rcpp_result_gen;
-END_RCPP
-}
-// my_logC2_central
-Eigen::VectorXd my_logC2_central(const unsigned int& n, const double& scale);
-RcppExport SEXP _GDFMM_my_logC2_central(SEXP nSEXP, SEXP scaleSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
-    rcpp_result_gen = Rcpp::wrap(my_logC2_central(n, scale));
-    return rcpp_result_gen;
-END_RCPP
-}
-// compute_logC
-Rcpp::NumericVector compute_logC(const unsigned int& n, const double& scale, const double& location);
-RcppExport SEXP _GDFMM_compute_logC(SEXP nSEXP, SEXP scaleSEXP, SEXP locationSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
-    Rcpp::traits::input_parameter< const double& >::type location(locationSEXP);
-    rcpp_result_gen = Rcpp::wrap(compute_logC(n, scale, location));
-    return rcpp_result_gen;
-END_RCPP
-}
 // falling_factorial
 double falling_factorial(double x, int n);
 RcppExport SEXP _GDFMM_falling_factorial(SEXP xSEXP, SEXP nSEXP) {
@@ -359,18 +235,109 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// raising_factorial
+double raising_factorial(const unsigned int& n, const double& a);
+RcppExport SEXP _GDFMM_raising_factorial(SEXP nSEXP, SEXP aSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double& >::type a(aSEXP);
+    rcpp_result_gen = Rcpp::wrap(raising_factorial(n, a));
+    return rcpp_result_gen;
+END_RCPP
+}
+// my_falling_factorial
+double my_falling_factorial(const unsigned int& n, const double& a);
+RcppExport SEXP _GDFMM_my_falling_factorial(SEXP nSEXP, SEXP aSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double& >::type a(aSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_falling_factorial(n, a));
+    return rcpp_result_gen;
+END_RCPP
+}
+// compute_Pochhammer
+double compute_Pochhammer(const unsigned int& x, const double& a);
+RcppExport SEXP _GDFMM_compute_Pochhammer(SEXP xSEXP, SEXP aSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const double& >::type a(aSEXP);
+    rcpp_result_gen = Rcpp::wrap(compute_Pochhammer(x, a));
+    return rcpp_result_gen;
+END_RCPP
+}
+// build_logC_matrix
+void build_logC_matrix(const unsigned int& n, const unsigned int& k, const double& s, const double& r, Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor>& res);
+RcppExport SEXP _GDFMM_build_logC_matrix(SEXP nSEXP, SEXP kSEXP, SEXP sSEXP, SEXP rSEXP, SEXP resSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const unsigned int& >::type k(kSEXP);
+    Rcpp::traits::input_parameter< const double& >::type s(sSEXP);
+    Rcpp::traits::input_parameter< const double& >::type r(rSEXP);
+    Rcpp::traits::input_parameter< Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor>& >::type res(resSEXP);
+    build_logC_matrix(n, k, s, r, res);
+    return R_NilValue;
+END_RCPP
+}
+// my_logC
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor> my_logC(const unsigned int& n, const double& scale, const double& location);
+RcppExport SEXP _GDFMM_my_logC(SEXP nSEXP, SEXP scaleSEXP, SEXP locationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< const double& >::type location(locationSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_logC(n, scale, location));
+    return rcpp_result_gen;
+END_RCPP
+}
+// my_logC2
+Eigen::VectorXd my_logC2(const unsigned int& n, const double& scale, const double& location);
+RcppExport SEXP _GDFMM_my_logC2(SEXP nSEXP, SEXP scaleSEXP, SEXP locationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< const double& >::type location(locationSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_logC2(n, scale, location));
+    return rcpp_result_gen;
+END_RCPP
+}
+// my_logC2_central
+Eigen::VectorXd my_logC2_central(const unsigned int& n, const double& scale);
+RcppExport SEXP _GDFMM_my_logC2_central(SEXP nSEXP, SEXP scaleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_logC2_central(n, scale));
+    return rcpp_result_gen;
+END_RCPP
+}
+// compute_logC
+Rcpp::NumericVector compute_logC(const unsigned int& n, const double& scale, const double& location);
+RcppExport SEXP _GDFMM_compute_logC(SEXP nSEXP, SEXP scaleSEXP, SEXP locationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const unsigned int& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double& >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< const double& >::type location(locationSEXP);
+    rcpp_result_gen = Rcpp::wrap(compute_logC(n, scale, location));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_GDFMM_try_rcpp", (DL_FUNC) &_GDFMM_try_rcpp, 1},
-    {"_GDFMM_example_GDFMM_sampler_c", (DL_FUNC) &_GDFMM_example_GDFMM_sampler_c, 2},
-    {"_GDFMM_raising_factorial", (DL_FUNC) &_GDFMM_raising_factorial, 2},
-    {"_GDFMM_my_falling_factorial", (DL_FUNC) &_GDFMM_my_falling_factorial, 2},
-    {"_GDFMM_compute_Pochhammer", (DL_FUNC) &_GDFMM_compute_Pochhammer, 2},
-    {"_GDFMM_build_logC_matrix", (DL_FUNC) &_GDFMM_build_logC_matrix, 5},
-    {"_GDFMM_my_logC", (DL_FUNC) &_GDFMM_my_logC, 3},
-    {"_GDFMM_my_logC2", (DL_FUNC) &_GDFMM_my_logC2, 3},
-    {"_GDFMM_my_logC2_central", (DL_FUNC) &_GDFMM_my_logC2_central, 2},
-    {"_GDFMM_compute_logC", (DL_FUNC) &_GDFMM_compute_logC, 3},
     {"_GDFMM_falling_factorial", (DL_FUNC) &_GDFMM_falling_factorial, 2},
     {"_GDFMM_calcola_stirling", (DL_FUNC) &_GDFMM_calcola_stirling, 3},
     {"_GDFMM_calcola_stirling_ricor", (DL_FUNC) &_GDFMM_calcola_stirling_ricor, 3},
@@ -390,6 +357,14 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GDFMM_calcola_stirling_ricor_log_old", (DL_FUNC) &_GDFMM_calcola_stirling_ricor_log_old, 2},
     {"_GDFMM_calcola_generalized_factorial_ricor_log_old", (DL_FUNC) &_GDFMM_calcola_generalized_factorial_ricor_log_old, 2},
     {"_GDFMM_calcola_generalized_factorial_ricor_log_matrice_old", (DL_FUNC) &_GDFMM_calcola_generalized_factorial_ricor_log_matrice_old, 2},
+    {"_GDFMM_raising_factorial", (DL_FUNC) &_GDFMM_raising_factorial, 2},
+    {"_GDFMM_my_falling_factorial", (DL_FUNC) &_GDFMM_my_falling_factorial, 2},
+    {"_GDFMM_compute_Pochhammer", (DL_FUNC) &_GDFMM_compute_Pochhammer, 2},
+    {"_GDFMM_build_logC_matrix", (DL_FUNC) &_GDFMM_build_logC_matrix, 5},
+    {"_GDFMM_my_logC", (DL_FUNC) &_GDFMM_my_logC, 3},
+    {"_GDFMM_my_logC2", (DL_FUNC) &_GDFMM_my_logC2, 3},
+    {"_GDFMM_my_logC2_central", (DL_FUNC) &_GDFMM_my_logC2_central, 2},
+    {"_GDFMM_compute_logC", (DL_FUNC) &_GDFMM_compute_logC, 3},
     {NULL, NULL, 0}
 };
 

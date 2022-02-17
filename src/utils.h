@@ -105,17 +105,6 @@ namespace utils{
 		return SubMatrix(M, idx_rows, Eigen::Map<const VecUnsCol> (&idx_cols, 1));
 	}
 
-	//------------------------------------------------------------------------------------------------------------------------------------------------------
-	//	Recursive function for C numbers
-	//------------------------------------------------------------------------------------------------------------------------------------------------------
-
-	//double raising_factorial(const unsigned int& n, const double& a);
-	//double my_falling_factorial(const unsigned int& n, const double& a);
-	//double compute_Pochhammer(const unsigned int& x, const double& a);
-//	
-	//void build_logC_matrix(const unsigned int& n, const unsigned int& k, const double& s, const double& r, MatCol& res);
-
-
 }
 
 #endif
