@@ -2,7 +2,7 @@ my_logC(n = 4, scale = -exp(2), location = 0)
 lgfactorial_ns(n = 4, sigma = -exp(2))
 my_logC2(n = 4, scale = -exp(2), location = 0)
 my_logC2_central(n = 4, scale = -exp(2))
-my_logC3(n = 4, scale = -exp(2), location = 0)
+compute_logC(n = 4, scale = -exp(2), location = 0)
 
 
 start_time1 <- Sys.time()
@@ -56,7 +56,7 @@ end_time5 - start_time5
 start_time6 <- Sys.time()
 for(i in 1:1000){
 
-  ac_c3 = my_logC3(n = 500, scale = -1, location = 0)
+  ac_c3 = compute_logC(n = 500, scale = -1, location = 0)
 
 }
 end_time6 <- Sys.time()
