@@ -154,6 +154,13 @@ calcola_generalized_factorial_ricor_log_matrice_old <- function(gamma, n) {
     .Call(`_GDFMM_calcola_generalized_factorial_ricor_log_matrice_old`, gamma, n)
 }
 
+#' Title Rcpp function
+#'
+#' @export
+try_rcpp <- function(x) {
+    .Call(`_GDFMM_try_rcpp`, x)
+}
+
 #' Raising Factorial
 #'
 #' \loadmathjax This function computes the rising factorial \mjseqn{(a)^{n}} using the gsl code for the Pochhammer symbol, i.e

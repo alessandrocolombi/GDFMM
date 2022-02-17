@@ -235,6 +235,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// try_rcpp
+int try_rcpp(int x);
+RcppExport SEXP _GDFMM_try_rcpp(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(try_rcpp(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 // raising_factorial
 double raising_factorial(const unsigned int& n, const double& a);
 RcppExport SEXP _GDFMM_raising_factorial(SEXP nSEXP, SEXP aSEXP) {
@@ -357,6 +368,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GDFMM_calcola_stirling_ricor_log_old", (DL_FUNC) &_GDFMM_calcola_stirling_ricor_log_old, 2},
     {"_GDFMM_calcola_generalized_factorial_ricor_log_old", (DL_FUNC) &_GDFMM_calcola_generalized_factorial_ricor_log_old, 2},
     {"_GDFMM_calcola_generalized_factorial_ricor_log_matrice_old", (DL_FUNC) &_GDFMM_calcola_generalized_factorial_ricor_log_matrice_old, 2},
+    {"_GDFMM_try_rcpp", (DL_FUNC) &_GDFMM_try_rcpp, 1},
     {"_GDFMM_raising_factorial", (DL_FUNC) &_GDFMM_raising_factorial, 2},
     {"_GDFMM_my_falling_factorial", (DL_FUNC) &_GDFMM_my_falling_factorial, 2},
     {"_GDFMM_compute_Pochhammer", (DL_FUNC) &_GDFMM_compute_Pochhammer, 2},
